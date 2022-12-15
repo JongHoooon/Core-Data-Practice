@@ -13,6 +13,7 @@
 		EDF57C24294B50D800FA1E99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF57C23294B50D800FA1E99 /* Preview Assets.xcassets */; };
 		EDF57C2C294B50F300FA1E99 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF57C2B294B50F300FA1E99 /* CoreDataManager.swift */; };
 		EDF57C2F294B523A00FA1E99 /* CoreDataBlocksModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF57C2D294B523A00FA1E99 /* CoreDataBlocksModel.xcdatamodeld */; };
+		EDF57C34294B5A2200FA1E99 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF57C33294B5A2200FA1E99 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		EDF57C23294B50D800FA1E99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDF57C2B294B50F300FA1E99 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EDF57C2E294B523A00FA1E99 /* CoreDataBlocksModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataBlocksModel.xcdatamodel; sourceTree = "<group>"; };
+		EDF57C33294B5A2200FA1E99 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				EDF57C2B294B50F300FA1E99 /* CoreDataManager.swift */,
+				EDF57C33294B5A2200FA1E99 /* CoreDataStack.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF57C34294B5A2200FA1E99 /* CoreDataStack.swift in Sources */,
 				EDF57C2F294B523A00FA1E99 /* CoreDataBlocksModel.xcdatamodeld in Sources */,
 				EDF57C2C294B50F300FA1E99 /* CoreDataManager.swift in Sources */,
 				EDF57C1F294B50D700FA1E99 /* ContentView.swift in Sources */,
