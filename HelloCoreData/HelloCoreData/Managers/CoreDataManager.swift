@@ -21,6 +21,18 @@ class CoreDataManager {
         }
     }
     
+    func getAllMovies() -> [Movie] {
+        
+        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        
+        do {
+            return try persistentContainer.viewContext.fetch(fetchRequest)
+        } catch {
+            return []
+        }
+        
+    }
+    
     func saveMovie(title: String) {
         
         let movie = Movie(context: persistentContainer.viewContext)

@@ -11,17 +11,32 @@ struct ContentView: View {
     
     let coreDM: CoreDataManager
     @State private var moviewName: String = ""
+    @State private var movies: [Movie] = [Movie]()
+    
+    private func populateMovies() {
+        movies = coreDM.getAllMovies()
+    }
     
     var body: some View {
         VStack {
-            TextField("Enter movie name", text: $moviewName)
+            let textField = TextField("Enter movie name", text: $moviewName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button("Save") {
                 coreDM.saveMovie(title: moviewName)
+                populateMovies()
             }
+            
+            List(movies, id: \.self) { movie in
+                Text(movie.title ?? "")
+            }
+            
             Spacer()
-        }.padding()
+        }
+        .padding()
+        .onAppear {
+            populateMovies()
+        }
     }
 }
 
