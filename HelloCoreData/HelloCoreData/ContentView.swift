@@ -30,4 +30,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(coreDM: CoreDataManager())
     }
 }
-
