@@ -21,6 +21,18 @@ class CoreDataManager {
         }
     }
     
+    func deleteMovie(movie: Movie) {
+        
+        persistentContainer.viewContext.delete(movie)
+        
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            persistentContainer.viewContext.rollback()
+            print("Failed to save contetx \(error.localizedDescription)")
+        }
+    }
+    
     func getAllMovies() -> [Movie] {
         
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
@@ -30,7 +42,6 @@ class CoreDataManager {
         } catch {
             return []
         }
-        
     }
     
     func saveMovie(title: String) {
