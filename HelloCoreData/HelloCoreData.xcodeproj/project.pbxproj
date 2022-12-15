@@ -16,6 +16,7 @@
 		EDF57BFA294B02B900FA1E99 /* HelloCoreDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF57BF9294B02B900FA1E99 /* HelloCoreDataUITestsLaunchTests.swift */; };
 		EDF57C08294B02DC00FA1E99 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF57C07294B02DC00FA1E99 /* CoreDataManager.swift */; };
 		EDF57C0B294B034D00FA1E99 /* HelloCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF57C09294B034D00FA1E99 /* HelloCoreDataModel.xcdatamodeld */; };
+		EDF57C0D294B1A5700FA1E99 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF57C0C294B1A5700FA1E99 /* MovieDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		EDF57BF9294B02B900FA1E99 /* HelloCoreDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloCoreDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EDF57C07294B02DC00FA1E99 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		EDF57C0A294B034D00FA1E99 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		EDF57C0C294B1A5700FA1E99 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EDF57C09294B034D00FA1E99 /* HelloCoreDataModel.xcdatamodeld */,
 				EDF57BE0294B02B800FA1E99 /* Assets.xcassets */,
 				EDF57BE2294B02B800FA1E99 /* Preview Content */,
+				EDF57C0C294B1A5700FA1E99 /* MovieDetail.swift */,
 			);
 			path = HelloCoreData;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				EDF57C08294B02DC00FA1E99 /* CoreDataManager.swift in Sources */,
 				EDF57BDF294B02B800FA1E99 /* ContentView.swift in Sources */,
+				EDF57C0D294B1A5700FA1E99 /* MovieDetail.swift in Sources */,
 				EDF57BDD294B02B800FA1E99 /* HelloCoreDataApp.swift in Sources */,
 				EDF57C0B294B034D00FA1E99 /* HelloCoreDataModel.xcdatamodeld in Sources */,
 			);

@@ -18,32 +18,37 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            let textField = TextField("Enter movie name", text: $moviewName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            Button("Save") {
-                coreDM.saveMovie(title: moviewName)
+        
+        NavigationView {
+            VStack {
+                TextField("Enter movie name", text: $moviewName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                Button("Save") {
+                    coreDM.saveMovie(title: moviewName)
+                    populateMovies()
+                }
+                
+                List {
+                    ForEach(movies, id: \.self) { movie in
+                        NavigationLink(destination: MovieDetail(movie: movie, coreDM: coreDM),
+                                       label: { Text(movie.title ?? "") })
+                    }.onDelete(perform: { indexSet in
+                        indexSet.forEach { index in
+                            let movie = movies[index]
+                            coreDM.deleteMovie(movie: movie)
+                            populateMovies()
+                        }
+                    })
+                }
+                .listStyle(PlainListStyle())
+                
+                Spacer()
+            }
+            .padding()
+            .onAppear (perform: {
                 populateMovies()
-            }
-            
-            List {
-                ForEach(movies, id: \.self) { movie in
-                    Text(movie.title ?? "")
-                }.onDelete(perform: { indexSet in
-                    indexSet.forEach { index in
-                        let movie = movies[index]
-                        coreDM.deleteMovie(movie: movie)
-                        populateMovies() 
-                    }
-                })
-            }
-            
-            Spacer()
-        }
-        .padding()
-        .onAppear {
-            populateMovies()
+            })
         }
     }
 }
