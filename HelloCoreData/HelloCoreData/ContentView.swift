@@ -12,6 +12,7 @@ struct ContentView: View {
     let coreDM: CoreDataManager
     @State private var moviewName: String = ""
     @State private var movies: [Movie] = [Movie]()
+    @State private var needsRefresh: Bool = false
     
     private func populateMovies() {
         movies = coreDM.getAllMovies()
@@ -31,7 +32,9 @@ struct ContentView: View {
                 
                 List {
                     ForEach(movies, id: \.self) { movie in
-                        NavigationLink(destination: MovieDetail(movie: movie, coreDM: coreDM),
+                        NavigationLink(destination: MovieDetail(movie: movie,
+                                                                coreDM: coreDM,
+                                                                needsRefresh: $needsRefresh),
                                        label: { Text(movie.title ?? "") })
                     }.onDelete(perform: { indexSet in
                         indexSet.forEach { index in
@@ -42,6 +45,7 @@ struct ContentView: View {
                     })
                 }
                 .listStyle(PlainListStyle())
+                .accentColor(needsRefresh ? .white: .black)
                 
                 Spacer()
             }

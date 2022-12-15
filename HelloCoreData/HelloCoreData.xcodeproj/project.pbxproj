@@ -103,10 +103,10 @@
 				EDF57C06294B02DC00FA1E99 /* Managers */,
 				EDF57BDC294B02B800FA1E99 /* HelloCoreDataApp.swift */,
 				EDF57BDE294B02B800FA1E99 /* ContentView.swift */,
+				EDF57C0C294B1A5700FA1E99 /* MovieDetail.swift */,
 				EDF57C09294B034D00FA1E99 /* HelloCoreDataModel.xcdatamodeld */,
 				EDF57BE0294B02B800FA1E99 /* Assets.xcassets */,
 				EDF57BE2294B02B800FA1E99 /* Preview Content */,
-				EDF57C0C294B1A5700FA1E99 /* MovieDetail.swift */,
 			);
 			path = HelloCoreData;
 			sourceTree = "<group>";

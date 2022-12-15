@@ -13,6 +13,7 @@ struct MovieDetail: View {
     let coreDM: CoreDataManager
     
     @State private var movieName: String = ""
+    @Binding var needsRefresh: Bool
     
     var body: some View {
         VStack {
@@ -23,6 +24,7 @@ struct MovieDetail: View {
                 if !movieName.isEmpty {
                     movie.title = movieName
                     coreDM.updateMovie()
+                    needsRefresh.toggle()
                 }
             }
         }
@@ -36,6 +38,6 @@ struct MovieDetail_Previews: PreviewProvider {
         let coreDM = CoreDataManager()
         let movie = Movie(context: coreDM.persistentContainer.viewContext)
         
-        MovieDetail(movie: movie, coreDM: coreDM)
+        MovieDetail(movie: movie, coreDM: coreDM, needsRefresh: .constant(false))
     }
 }
